@@ -1,16 +1,32 @@
 export interface XY {
   x: number;
-  y: number
+  y: number;
 }
 
-export type Pos = 'left' | 'right' | 'up' | 'down';
-export type LabelPos = 'left' | 'right' | 'up' | 'down' | 'center'
-| 'up left' | 'up right' | 'down left' | 'down right';
+export type Pos = "left" | "right" | "up" | "down";
+export type LabelPos =
+  | "left"
+  | "right"
+  | "up"
+  | "down"
+  | "center"
+  | "up left"
+  | "up right"
+  | "down left"
+  | "down right";
 
-export type Shape = 'circle' | 'dot' | 'asterisk' | 'square' | 'triangleUp'
-| 'triangleDown' | 'triangleLeft' | 'triangleRight' | 'rectangle';
+export type Shape =
+  | "circle"
+  | "dot"
+  | "asterisk"
+  | "square"
+  | "triangleUp"
+  | "triangleDown"
+  | "triangleLeft"
+  | "triangleRight"
+  | "rectangle";
 
-export interface Indice {
+export interface Index {
   pos: Pos;
   name: string;
   order: number;
@@ -26,7 +42,7 @@ export interface Tensor {
   labPos: LabelPos;
   color?: string;
   size: number;
-  indices: Indice[];
+  indices: Index[];
   rectHeight: number;
 }
 
@@ -50,4 +66,4 @@ export interface Line {
   end: XY;
 }
 
-export type RelPos = 'start' | 'right' | 'down' | XY;
+export type RelPos = "start" | "right" | "down" | XY;
